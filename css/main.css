@@ -1,0 +1,22 @@
+:root {
+    --page-color: hsla(172, 64%, 44%, 0.9);
+    --body-color: hsla(247, 64%, 44%, 0.9);
+    --sidebar-color: hsla(247, 64%, 44%, 0.9);
+    --footbar-color: hsla(247, 59%, 28%, 0.9);
+    --tab-color: hsla(247, 87%, 57%, 0.9);
+}
+
+
+body {
+
+    background-color: var(--body-color);
+}
+aside.sidebar{
+    background-color: var(--sidebar-color);
+}
+#zen-intro{
+    background-color: var(--page-color);
+}
+#zen-supporting{
+    background-color: var(--page-color);
+}
