@@ -85,6 +85,7 @@ div.participation {
     border-bottom-right-radius: 50%;
 border: teal 10px double;
 background-clip: content-box;
+transition: all 2s ease-in-out ;
 }
 
 div.explanation {
@@ -111,6 +112,7 @@ div.participation h3 {
     width: var(--tab-width);
     height: var(--tab-height);
     background-color: var(--tab-color);
+transition: background-color 2s ease-in-out;
 
 }
 
@@ -119,7 +121,7 @@ aside.sidebar {
     top: 20%;
     right: 0;
     width: 20%;
-    height: 100%;
+    height: 60%;
     z-index: 3;
 }
 
@@ -190,4 +192,72 @@ p:nth-child(2n){
 }
 p:nth-child(2n+1){
     background-color: hsla(30, 32%, 88%, 0.9);
+}
+/*transition practice*/
+section.intro h3 ~p{
+opacity: 1;
+transition: all 3s ease-in-out;
+
+}
+section.intro h3:hover ~p{
+    opacity: 0;
+    transform: scale(0.2);
+}
+footer{
+animation:10s ease-in-out 2s alternate infinite moveback;
+
+}
+/*animation*/
+
+@keyframes moveback{
+from{transform: translate(-500);}
+30%{transform: translate(-300px, 0px);}
+50%{transform: translate(0px,0px);}
+70%{transform: translate(300px,0px);}
+90%{transform: translate(500px,0px);}
+}
+
+footer{
+    position: fixed;
+    bottom: 20%;
+    position: center 
+    
+
+}
+
+h2{
+background-image: linear-gradient(blue, purple, pink);
+
+animation: 4s infinite running changecolor;
+
+}
+@keyframes changecolor{
+from{background-image: linear-gradient(purple, pink, blue);}
+to{background-image: linear-gradient(pink,blue,purple);}
+to{background-image: linear-gradient(blue,purple,pink);}
+}
+
+/*fancy features*/
+div.extra1{
+border-image: linear-gradiet(blue,pink) 10 / 15px round;
+
+
+}
+aside.sidebar{
+    font-size: 0.8em;
+    clip-path: polygon( 0 0, 0 70%, 50% 100%, 100 70%, 100% 0);
+
+}
+
+div#design-archives{
+
+    display: none;
+
+
+}
+aside.sidebar h3{
+    display: none;
+}
+aside.sidebar ul li{
+    list-style: none;
 }
