@@ -1,22 +1,193 @@
+/* Style file created by yilian zhang 
+=============================
+00: CSS variables 
+01: Color 
+02: Typography
+
+*/
+
+/* 00: CSS variables */
 :root {
-    --page-color: hsla(172, 64%, 44%, 0.9);
-    --body-color: hsla(247, 64%, 44%, 0.9);
-    --sidebar-color: hsla(247, 64%, 44%, 0.9);
-    --footbar-color: hsla(247, 59%, 28%, 0.9);
-    --tab-color: hsla(247, 87%, 57%, 0.9);
+    --page-color: hsla(30, 32%, 88%, 0.9);
+    --body-color: hsla(220, 79%, 29%, 0.9);
+    --sidebar-color: rgb(155, 240, 255);
+    --footbar-color: rgb(136, 209, 255);
+    --tab-color: rgb(204, 9, 178);
+    --footbar-height: 15vh;
+    --page-position: 85%;
+    --page-width: 30%;
+    --tab-gap: 2vw;
+    --tab-width: 10vw;
+    --tab-height: 5vh;
 }
 
-
+/* 01: Color */
 body {
-
     background-color: var(--body-color);
+    padding: 5px;
 }
-aside.sidebar{
+
+aside.sidebar {
     background-color: var(--sidebar-color);
 }
-#zen-intro{
+
+#zen-intro {
     background-color: var(--page-color);
 }
-#zen-supporting{
+
+#zen-supporting {
     background-color: var(--page-color);
+}
+
+/* 02: Typography */
+@font-face {
+    font-family: 'myfont';
+    src: url(../fonts/chunkfive.woff);
+}
+
+header h1 {
+    font-family: 'myfont', sans-serif;
+    font-weight: 400;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+h3 {
+    font-family: 'Ranchers', cursive;
+    font-size: 1.25em;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    list-style: none;
+
+
+}
+
+
+/* 03: Layout */
+/* For test */
+div.explanation,
+div.requirements,
+div.benefits,
+div.participation {
+    position: fixed;
+    top: var(--page-position);
+    height: 80vh;
+    width: var(--page-width);
+    padding-left: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    background-image: url(../img/newspaper3.jpg);
+    border-bottom-right-radius: 50%;
+border: teal 10px double;
+background-clip: content-box;
+}
+
+div.explanation {
+    left: 0%;
+}
+
+div.requirements {
+    left: 12vw;
+}
+
+div.benefits {
+    left: 24vw;
+}
+
+div.participation {
+    left: 36vw;
+}
+
+div.explanation h3,
+div.requirements h3,
+div.benefits h3,
+div.participation h3 {
+    margin-top: -15%;
+    width: var(--tab-width);
+    height: var(--tab-height);
+    background-color: var(--tab-color);
+
+}
+
+aside.sidebar {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 3;
+}
+
+div.extra2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--footbar-height);
+    background-color: var(--footbar-color);
+}
+
+/* footer -- try it outside of the clas */
+/* introductio -in the middle */
+section.intro {
+    position: fixed;
+    bottom: 5%;
+    left: 30%;
+    width: 30%;
+    height: 80%;
+    padding: 2%;
+    background-image: url(../img/newspaper3.jpg);
+    transform: rotate(-20deg) translateX(-50px);
+}
+
+div.extra1 {
+    position: fixed;
+    bottom: 5%;
+    left: 35%;
+    width: 30%;
+    height: 80%;
+    padding: 2%;
+    background-image: url(../img/newspaper1.jpg);
+    z-index: -1;
+    transform: rotate(20deg);
+}
+
+/*Other decorations*/
+div.explanation:active
+{
+top:15vh;
+}
+div.requirements:active{
+    top:15vh;
+}
+
+div.benefits:active{
+    top:15vh;
+}
+
+div.participation:active{
+    top:15vh;
+}
+
+a:hover {
+    font-size: 1.2em;
+    text-indent: -100px;
+
+}
+
+p::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+p:nth-child(2n){
+    background-color: blueviolet;
+
+}
+p:nth-child(2n+1){
+    background-color: hsla(30, 32%, 88%, 0.9);
 }
